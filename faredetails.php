@@ -9,7 +9,7 @@ sec_session_start();
 include_once( 'php/session_expire.php' );
 
 // protecting unauthorise access of faredetails.php
-// no one can acces this page with out visiting index page\
+// no one can acces this page without visiting index page\
 if ( !isset( $_SESSION['index'] ) || ! isset($_SESSION['servicecat']) ) {
 	header('location: hackertracer.php?unauthorized_access');
 	}
